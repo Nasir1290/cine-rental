@@ -27,7 +27,7 @@ export default function Header() {
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img src={Moon} width="24" height="24" alt="" /
+              <img src={Moon} width="24" height="24" alt="" />
             </a>
           </li>
           <li>
