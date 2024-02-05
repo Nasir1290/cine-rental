@@ -1,1 +1,1 @@
-console.log(Array(4).fill(null));
+console.log(Array(4).fill(null))
