@@ -23,16 +23,13 @@ export default function MovieCard({ movie }) {
       )}
 
       <figure className="p-4 border border-black shadow-lg dark:border-white/10 rounded-xl">
-        <figcaption
-          className="pt-4"
-          href="#"
-          onClick={() => handleMovieSelection(movie)}
-        >
+        <figcaption className="pt-4" href="#">
           {/* <a > */}
           <img
             className="w-full object-cover cursor-pointer"
             src={getImgUrl(movie.cover)}
             alt={movie.title}
+            onClick={() => handleMovieSelection(movie)}
           />
           <h3 className="text-xl mb-1">{movie.title}</h3>
           <p className="text-[#575A6E] text-sm mb-2">{movie.genre}</p>
