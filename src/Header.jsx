@@ -8,10 +8,14 @@ import CartDetails from "./cine/CartDetails";
 
 export default function Header() {
   const [showCart, setShowCart] = useState(false);
+
+  const handleShowDetails = () => {
+    setShowCart(true);
+  };
   return (
     <header>
       <nav className="container flex items-center justify-between space-x-10 py-6">
-        {showCart && <CartDetails />}
+        {showCart && <CartDetails onCLose={() => setShowCart(false)}/>}
         <a href="index.html">
           <img src={Logo} width="139" height="26" alt="logo" />
         </a>
@@ -38,7 +42,13 @@ export default function Header() {
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img src={ShopingCart} width="24" height="24" alt="shoping-cart" />
+              <img
+                src={ShopingCart}
+                width="24"
+                height="24"
+                alt="shoping-cart"
+                onClick={handleShowDetails}
+              />
             </a>
           </li>
         </ul>
