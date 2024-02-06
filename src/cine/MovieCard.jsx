@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { getImgUrl } from "../utils/cine-utility";
 import TagImg from "../assets/tag.svg";
 import MovieDetailsModal from "./MovieDetailsModal";
 import Ratings from "./Ratings";
+import { MovieContext } from "../contexts";
 
 export default function MovieCard({ movie }) {
   const [showModal, setShowModal] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const { cartData, setCartData } = useContext(MovieContext);
 
   const handleClose = () => {
     setSelectedMovie(null);
@@ -18,13 +20,21 @@ export default function MovieCard({ movie }) {
     setShowModal(true);
   };
 
-  const handleAddtoCart = (movie) => {
-    console.log(movie)
-  }
+  const handleAddtoCart = (e,movie) => {
+    e.stopPropagation();
+    const found = cartData.find((item) => item.id === movie.id);
+    if (!found) {
+      let updatedCart = [...cartData,movie]
+      setCartData(updatedCart);
+    } else {
+      console.log(`${movie.title} has already been added to the cart`);
+    }
+  };
+
   return (
     <>
       {showModal && (
-        <MovieDetailsModal movie={selectedMovie} onClose={handleClose} />
+        <MovieDetailsModal movie={selectedMovie} onClose={handleClose} onAddToCart={handleAddtoCart}/>
       )}
 
       <figure className="p-4 border border-black shadow-lg dark:border-white/10 rounded-xl">
@@ -44,7 +54,7 @@ export default function MovieCard({ movie }) {
           <a
             className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
             href="#"
-            onClick={()=>handleAddtoCart(movie)}
+            onClick={(e) => handleAddtoCart(e,movie)}
           >
             <img src={TagImg} alt="" />
             <span>${movie.price} | Add to Cart</span>
