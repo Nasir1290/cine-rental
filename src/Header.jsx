@@ -5,13 +5,12 @@ import Sun from "./assets/icons/sun.svg";
 import Moon from "./assets/icons/moon.svg";
 import ShopingCart from "./assets/shopping-cart.svg";
 import CartDetails from "./cine/CartDetails";
-import { MovieContext ,ThemeContext} from "./contexts";
+import { MovieContext, ThemeContext } from "./contexts";
 
 export default function Header() {
-
   const [showCart, setShowCart] = useState(false);
   const { cartData } = useContext(MovieContext);
-  const {darkMode,setDarkMode} = useContext(ThemeContext);
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const handleShowDetails = () => {
     setShowCart(true);
@@ -39,7 +38,7 @@ export default function Header() {
               href="#"
               onClick={() => setDarkMode((darkMode) => !darkMode)}
             >
-              <img src={darkMode?Sun:Moon} width="24" height="24" alt="" />
+              <img src={darkMode ? Sun : Moon} width="24" height="24" alt="" />
             </a>
           </li>
           <li>

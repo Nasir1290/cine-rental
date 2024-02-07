@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { MovieContext } from "../contexts";
 import DeleteImg from "../assets/delete.svg";
+import CheckoutImg from "../assets/icons/checkout.svg"
 import { getImgUrl } from "../utils/cine-utility";
 
 export default function CartDetails({ onCLose }) {
@@ -63,7 +64,7 @@ export default function CartDetails({ onCLose }) {
               href="#"
             >
               <img
-                src="./assets/icons/checkout.svg"
+                src={CheckoutImg}
                 width="24"
                 height="24"
                 alt=""
