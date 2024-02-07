@@ -5,12 +5,15 @@ import CheckoutImg from "../assets/icons/checkout.svg"
 import { getImgUrl } from "../utils/cine-utility";
 
 export default function CartDetails({ onCLose }) {
-  const { cartData, setCartData } = useContext(MovieContext);
+  const { state, dispatch } = useContext(MovieContext);
 
   const handleDeleteCartItem = (event, cartId) => {
     event.preventDefault();
-    let filteredItems = cartData.filter((item) => item.id !== cartId);
-    setCartData(filteredItems);
+    dispatch({
+      type:"REMOVE_FROM_CART",
+      payload:cartId
+    })
+    console.log(cartId)
   };
   return (
     <div className="fixed top-0 left-0 w-screen h-screen z-50 bg-black/60 backdrop-blur-sm">
@@ -21,10 +24,10 @@ export default function CartDetails({ onCLose }) {
           </h2>
           <div className="space-y-8 lg:space-y-12 max-h-[450px] overflow-auto mb-10 lg:mb-14">
             {/* dynamic data  */}
-            {cartData.length == 0 ? (
+            {state.length == 0 ? (
               <p className=" text-3xl">The Cart is Empty </p>
             ) : (
-              cartData.map((item) => (
+              state.map((item) => (
                 <div key={item.id} className="grid grid-cols-[1fr_auto] gap-4">
                   <div className="flex items-center gap-4">
                     <img

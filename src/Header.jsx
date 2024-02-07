@@ -9,7 +9,7 @@ import { MovieContext, ThemeContext } from "./contexts";
 
 export default function Header() {
   const [showCart, setShowCart] = useState(false);
-  const { cartData } = useContext(MovieContext);
+  const { state } = useContext(MovieContext);
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const handleShowDetails = () => {
@@ -53,9 +53,9 @@ export default function Header() {
                 alt="shoping-cart"
                 onClick={handleShowDetails}
               />
-              {cartData.length > 0 && (
+              {state.length > 0 && (
                 <span className="rounded-full absolute top-[-12px] left-[28px] bg-[#12CF6F] text-white text-center p-[2px] w-[30px] h-[30px]">
-                  {cartData.length}
+                  {state.length}
                 </span>
               )}
             </a>
