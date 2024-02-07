@@ -10,4 +10,4 @@ const movieReducer = (state, action) => {
     }
 }
 
-export {movieReducer};
+export {movieReducer}
