@@ -5,7 +5,7 @@ const movieReducer = (state, action) => {
             return [...state, action.payload];
 
         case "REMOVE_FROM_CART":
-            let filteredState = state.filter((item) => item.id !== action.payload);
+            let filteredState = state.filter((item) => item.id !== action.payload.id);
             return filteredState;
 
     }
