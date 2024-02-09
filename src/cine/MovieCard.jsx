@@ -86,5 +86,5 @@ export default function MovieCard({ movie }) {
         </figcaption>
       </figure>
     </>
-  )
+  );
 }
