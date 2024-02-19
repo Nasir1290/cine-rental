@@ -1,2 +1,4 @@
-<h1>cine-rental</h1>
-<a>Live Link => cine-rental-flax.vercel.app</a>
+
+<html>
+  live Link: https://www.cine-rental-flax.vercel.app
+</html>
