@@ -1,6 +1,6 @@
 const data = [
 
-    
+
     {
         "id": crypto.randomUUID(),
         "cover": "monica-o-my-darling.jpg",
@@ -46,6 +46,187 @@ const data = [
         "rating": 7.0,
         "price": 90
     },
+    {
+        "id": "c9b0a1z2y3x4",
+        "cover": "thappad.jpg",
+        "title": "Thappad",
+        "description": "A wife takes a stand for herself after her husband slaps her at a party, leading to a fight for justice and self-respect.",
+        "genre": "Drama",
+        "rating": 7.3,
+        "price": 100
+    },
+    {
+        "id": "n4m5l6k7j8i9",
+        "cover": "andhadhun.jpg",
+        "title": "Andhadhun",
+        "description": "A series of mysterious events change the life of a blind pianist, who must now report a crime that he never actually witnessed.",
+        "genre": "Thriller/Comedy",
+        "rating": 8.2,
+        "price": 115
+    },
+    {
+        "id": "j0i9h8g7f6e5",
+        "cover": "shershaah.jpg",
+        "title": "Shershaah",
+        "description": "The story of PVC awardee Indian soldier Capt. Vikram Batra, from his first posting to his death in the Kargil War.",
+        "genre": "Biography/Action",
+        "rating": 8.4,
+        "price": 130
+    },
+    {
+        "id": "p6o7n8m9l0k1",
+        "cover": "kgf-chapter-2.jpg",
+        "title": "KGF Chapter 2",
+        "description": "Rocky continues his quest to fulfill his mother's promise in the blood-soaked Kolar Gold Fields.",
+        "genre": "Action/Drama",
+        "rating": 8.4,
+        "price": 150
+    },
+    {
+        "id": "y5x6w7v8u9t0",
+        "cover": "83.jpg",
+        "title": "83",
+        "description": "The story of India's incredible cricket World Cup victory in 1983.",
+        "genre": "Biography/Drama",
+        "rating": 7.4,
+        "price": 110
+    },
+    {
+        "id": "z6y7x8w9v0u1",
+        "cover": "ludo.jpg",
+        "title": "Ludo",
+        "description": "A dark comedy anthology that juxtaposes four stories and perspectives in a game of fate.",
+        "genre": "Comedy/Crime",
+        "rating": 7.6,
+        "price": 105
+    },
+    {
+        "id": "a7z8y9x0w1v2",
+        "cover": "shiddat.jpg",
+        "title": "Shiddat",
+        "description": "A passionate love story between two star-crossed lovers.",
+        "genre": "Romance/Drama",
+        "rating": 7.0,
+        "price": 100
+    },
+    {
+        "id": "b8a9z0y1x2w3",
+        "cover": "haseen-dillruba.jpg",
+        "title": "Haseen Dillruba",
+        "description": "Under investigation as a suspect in her husband’s murder, a wife reveals details of their thorny marriage that seem to only further blur the truth.",
+        "genre": "Thriller/Drama",
+        "rating": 6.9,
+        "price": 95
+    },
+
+
+
+    {
+        "id": "k1j2i3h4g5f6",
+        "cover": "sooryavanshi.jpg",
+        "title": "Sooryavanshi",
+        "description": "DCP Veer Sooryavanshi, the chief of the Anti-Terrorism Squad in India, battles a massive terror plot.",
+        "genre": "Action/Thriller",
+        "rating": 6.8,
+        "price": 110
+    },
+    {
+        "id": "l2k3j4i5h6g7",
+        "cover": "chhichhore.jpg",
+        "title": "Chhichhore",
+        "description": "Following a group of friends from university as they progress into middle-age life and go their own separate ways.",
+        "genre": "Comedy/Drama",
+        "rating": 8.3,
+        "price": 100
+    },
+
+    {
+        "id": "o5n6m7l8k9j0",
+        "cover": "article-15.jpg",
+        "title": "Article 15",
+        "description": "In rural India, an upright police officer sets out to fight against caste-based discrimination and crimes.",
+        "genre": "Crime/Drama",
+        "rating": 8.0,
+        "price": 105
+    },
+
+    {
+        "id": "q7p8o9n0m1l2",
+        "cover": "lucifer.jpg",
+        "title": "Lucifer",
+        "description": "A political Godfather dies and a lot of thieves dressed up as politicians took over the lucrative business.",
+        "genre": "Action/Drama",
+        "rating": 7.5,
+        "price": 100
+    },
+    {
+        "id": "r8q9p0o1n2m3",
+        "cover": "batla-house.jpg",
+        "title": "Batla House",
+        "description": "After a deadly encounter, an officer battles intense scrutiny and public outcry as he hunts down the fugitives responsible.",
+        "genre": "Action/Drama",
+        "rating": 7.2,
+        "price": 95
+    },
+    {
+        "id": "s9r0q1p2o3n4",
+        "cover": "super-30.jpg",
+        "title": "Super 30",
+        "description": "Based on the life of mathematician Anand Kumar and his educational program Super 30.",
+        "genre": "Biography/Drama",
+        "rating": 7.9,
+        "price": 110
+    },
+    {
+        "id": "t0s1r2q3p4o5",
+        "cover": "the-kashmir-files.jpg",
+        "title": "The Kashmir Files",
+        "description": "A heart-wrenching narrative of the exodus of Kashmiri Pandits in the 1990s.",
+        "genre": "Drama/History",
+        "rating": 8.3,
+        "price": 125
+    },
+    {
+        "id": "u1t2s3r4q5p6",
+        "cover": "sardar-udham.jpg",
+        "title": "Sardar Udham",
+        "description": "A biopic on the Indian revolutionary Udham Singh who assassinated Michael O'Dwyer in London to avenge the 1919 Jallianwala Bagh massacre.",
+        "genre": "Biography/Drama",
+        "rating": 8.4,
+        "price": 140
+    },
+    {
+        "id": "v2u3t4s5r6q7",
+        "cover": "drishyam.jpg",
+        "title": "Drishyam",
+        "description": "A man goes to extreme lengths to save his family from punishment after the family commits an unexpected crime.",
+        "genre": "Mystery/Thriller",
+        "rating": 8.2,
+        "price": 120
+    },
+    {
+        "id": "w3v4u5t6s7r8",
+        "cover": "gangubai-kathiawadi.jpg",
+        "title": "Gangubai Kathiawadi",
+        "description": "The journey of a girl from Kathiawad who became the voice of Kamathipura.",
+        "genre": "Biography/Crime",
+        "rating": 7.0,
+        "price": 100
+    },
+    {
+        "id": "x4w5v6u7t8s9",
+        "cover": "pushpa.jpg",
+        "title": "Pushpa: The Rise",
+        "description": "The story of Pushpa Raj, a lorry driver in Seshachalam forests of South India, set in the backdrop of red sandalwood smuggling.",
+        "genre": "Action/Drama",
+        "rating": 7.9,
+        "price": 115
+    },
+
+  
+
+
+
     {
         "id": crypto.randomUUID(),
         "cover": "once-in-ho.jpg",

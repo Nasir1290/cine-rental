@@ -1,6 +1,6 @@
 import React from "react";
 
-function Paginate({ moviesPerPage, allMovies }) {
+function Paginate({ moviesPerPage, allMovies,paginate ,onPrevOrNextClick}) {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil((allMovies) / moviesPerPage); i++) {
@@ -13,17 +13,19 @@ function Paginate({ moviesPerPage, allMovies }) {
         <ul className="inline-flex -space-x-px text-base h-10">
           <li>
             <a
-              href="#"
+              href="!#"
               className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-primary dark:border-gray-700 dark:text-black dark:hover:bg-green-700 dark:hover:text-white"
+              onClick={()=>onPrevOrNextClick("prev",pageNumbers)}
             >
-              Previous
+              Prev
             </a>
           </li>
           {pageNumbers.map((number) => (
             <li key={number}>
               <a
-                href="#"
+                href="!#"
                 className=" font-bold flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-[#65ff5d] dark:border-gray-700 dark:text-[black] dark:hover:bg-gray-700 dark:hover:text-white"
+                onClick={() => paginate(number)}
               >
                 {number}
               </a>
@@ -32,8 +34,9 @@ function Paginate({ moviesPerPage, allMovies }) {
 
           <li>
             <a
-              href="#"
+              href="!#"
               className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-primary dark:border-gray-700 dark:text-black dark:hover:bg-green-700 dark:hover:text-white"
+              onClick={()=>onPrevOrNextClick("next",pageNumbers)}
             >
               Next
             </a>

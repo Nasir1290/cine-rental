@@ -12,11 +12,25 @@ export default function MovieList() {
 
   const indexOfLastMovie = currentPage * moviesPerPage;
   const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
-  // useEffect(() => {
-  //   setAllMovies(movies.slice(indexOfFirstMovie, indexOfLastMovie));
-  // }, [indexOfFirstMovie, indexOfLastMovie, movies]);
-
   const currentMovies = allMovies.slice(indexOfFirstMovie, indexOfLastMovie);
+
+  function paginate(number) {
+    setCurrentPage(number);
+  }
+
+  function handlePrevOrNextClick(prevOrNext, allPageNumbers) {
+    if (prevOrNext === "next") {
+      if (allPageNumbers[allPageNumbers.length - 1] === currentPage) {
+        return;
+      }
+      setCurrentPage(currentPage + 1);
+    } else {
+      if (currentPage===1) {
+        return;
+      }
+      setCurrentPage(currentPage - 1);
+    }
+  }
 
   return (
     <div className="content">
@@ -25,7 +39,12 @@ export default function MovieList() {
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
-      <Paginate moviesPerPage={moviesPerPage} allMovies={allMovies.length}/>
+      <Paginate
+        moviesPerPage={moviesPerPage}
+        allMovies={allMovies.length}
+        paginate={paginate}
+        onPrevOrNextClick={handlePrevOrNextClick}
+      />
     </div>
   );
 }
