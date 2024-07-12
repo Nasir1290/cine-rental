@@ -31,10 +31,10 @@ function Paginate({ moviesPerPage, allMovies, paginate, onPrevOrNextClick }) {
           <li key={number}>
             <a
               href="#"
-              className={`font-bold flex items-center justify-center px-4 h-10 leading-tight border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 ${
+              className={`font-semibold flex items-center justify-center px-4 h-10 leading-tight border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 ${
                 currentPage === number
-                  ? "text-white bg-blue-500 dark:bg-blue-700 dark:text-white"
-                  : "text-gray-500 bg-white dark:bg-[#65ff5d] dark:text-black"
+                  ? "text-white bg-blue-500 dark:bg-[#00f7ff] dark:text-black"
+                  : "text-gray-500 bg-white dark:bg-[#0e7909] dark:text-white"
               }`}
               onClick={() => {
                 paginate(number);
