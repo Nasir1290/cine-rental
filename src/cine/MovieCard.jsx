@@ -30,23 +30,24 @@ export default function MovieCard({ movie }) {
         type: "ADD_TO_CART",
         payload: movie,
       });
-      toast.success(`${movie.title} added successfully✔✔`, {
+      toast.success(`${movie.title} added to the cart.`, {
         position: "top-center",
-        autoClose: 1000,
+        autoClose: 1500,
         style: {
-          background: "green",
-          color: "white",
-          fontWeight: "bold",
+          background: "white",
+          color: "green",
+          // fontWeight: "bold",
         },
       });
     } else {
-      toast.error(`${movie.title} already added`, {
+      toast.warning(`${movie.title} already added`, {
         position: "bottom-center",
         autoClose: 1500,
         style: {
-          background: "red",
-          color: "white",
-          fontWeight: "bold",
+          background: "white",
+          color: "red",
+          // fontWeight: "red",
+          // border: "2px solid red",
         },
       });
     }
@@ -66,7 +67,7 @@ export default function MovieCard({ movie }) {
         <figcaption className="pt-4" href="#">
           {/* <a > */}
           <img
-            className="w-full object-cover cursor-pointer"
+            className="w-full h-[390px] object-cover cursor-pointer"
             src={getImgUrl(movie.cover)}
             alt={movie.title}
             onClick={() => handleMovieSelection(movie)}

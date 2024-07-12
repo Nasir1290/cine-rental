@@ -8,6 +8,10 @@ import "react-toastify/dist/ReactToastify.css";
 export default function App() {
   const [state, dispatch] = useReducer(movieReducer, []);
   const [darkMode, setDarkMode] = useState(true);
+
+
+
+
   return (
     <>
       <ThemeContext.Provider value={{ darkMode, setDarkMode }}>

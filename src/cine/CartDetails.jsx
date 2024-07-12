@@ -17,13 +17,14 @@ export default function CartDetails({ onCLose }) {
       type:"REMOVE_FROM_CART",
       payload:cart
     })
-    toast.success(`${cart.title} removed successfully✔✔`, {
+    toast.success(`${cart.title} removed from cart`, {
       position: "bottom-right",
       autoClose: 1500,
       style: {
-        background: "red",
-        color: "white",
-        fontWeight: "bold",
+        background: "white",
+        color: "red",
+        border:"2px solid red"
+        // fontWeight: "bold",
       },
     });
   };
