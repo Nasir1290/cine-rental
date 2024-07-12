@@ -14,7 +14,7 @@ function Paginate({ moviesPerPage, allMovies, paginate, onPrevOrNextClick }) {
       <ul className="inline-flex -space-x-px text-base h-10">
         <li>
           <a
-            href="!#"
+            href="#"
             className="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-primary dark:border-gray-700 dark:text-black dark:hover:bg-green-700 dark:hover:text-white"
             onClick={() => {
               onPrevOrNextClick("prev", pageNumbers);
@@ -30,7 +30,7 @@ function Paginate({ moviesPerPage, allMovies, paginate, onPrevOrNextClick }) {
         {pageNumbers.map((number) => (
           <li key={number}>
             <a
-              href="!#"
+              href="#"
               className={`font-bold flex items-center justify-center px-4 h-10 leading-tight border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 ${
                 currentPage === number
                   ? "text-white bg-blue-500 dark:bg-blue-700 dark:text-white"
@@ -48,7 +48,7 @@ function Paginate({ moviesPerPage, allMovies, paginate, onPrevOrNextClick }) {
 
         <li>
           <a
-            href="!#"
+            href="#"
             className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-primary dark:border-gray-700 dark:text-black dark:hover:bg-green-700 dark:hover:text-white"
             onClick={() => {
               if (currentPage !== pageNumbers[pageNumbers.length - 1]) {
