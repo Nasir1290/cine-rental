@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
 import TagImg from "../assets/tag.svg";
 import { getImgUrl } from "../utils/cine-utility";

@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import { MovieContext } from "../contexts";
 import DeleteImg from "../assets/delete.svg";
