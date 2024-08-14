@@ -16,8 +16,12 @@ export default function Sidebar() {
             <img src={Trending} width="24" height="24" alt="" />
             <span>Trending</span>
           </a>
+
+          
         </li>
-        <li>
+
+        {/* add feature later */}
+        {/* <li>
           <a
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
             href="#"
@@ -52,7 +56,9 @@ export default function Sidebar() {
             <img src={WatchLater} width="24" height="24" alt="" />
             <span>Watch Later</span>
           </a>
-        </li>
+        </li> */}
+
+
       </ul>
     </aside>
   );
